@@ -27,27 +27,6 @@
 
 
 
-<!--From j21-camera-pgb-helloworld -->
-
-    <gap:plugin name="org.apache.cordova.camera" />
-
-
-
-
-
-
-
-<!--From j22-accelerometer-and-device-pgb-helloworld -->
-
-    <gap:plugin name="org.apache.cordova.vibration" />  
-    <gap:plugin name="org.apache.cordova.dialogs" />  
-    <gap:plugin name="org.apache.cordova.network-information" />  
-    <gap:plugin name="org.apache.cordova.media" />  
-    <gap:plugin name="org.apache.cordova.geolocation" />  
-    <gap:plugin name="org.apache.cordova.file" />  
-    <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.device-motion" />
-
 
 
 
