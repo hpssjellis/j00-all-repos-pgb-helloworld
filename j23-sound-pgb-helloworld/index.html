@@ -15,6 +15,15 @@ function myPauseAll(){
 
 
 
+<input type=button value="Click here for Advanced Polyphonic, local app sounds" style="font-size:15px;background-color:red;" onclick="{
+  location ='advancedSounds.html'
+}">
+
+
+<br>
+<hr>
+<br>
+Load a url using an HTML5 audio tag.  http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3<br>
 
 <audio id="myAudio1" src="http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3"></audio>
 
@@ -29,6 +38,11 @@ function myPauseAll(){
 
 <input type=button value="pause" style="font-size:25px;" onclick="{
    document.getElementById('myAudio1').pause()
+}"><br>
+
+<input type=button value="stop" style="font-size:25px;" onclick="{
+   document.getElementById('myAudio1').pause()
+   document.getElementById('myAudio1').currentTime = 0;
 }"><br>
 
 
@@ -51,9 +65,9 @@ function myPauseAll(){
 
 
 
+Load another url http://yourwebsite/yourfolder/test.mp3<br>
 
-
-<audio id="myAudio2" src="http://142.33.222.23/ellis/test/test.mp3"></audio>
+<audio id="myAudio2" src="http://yourwebsite/yourfolder/test.mp3"></audio>
 
 <input type=button value="load" style="font-size:25px;" onclick="{
    document.getElementById('myAudio2').play()
@@ -69,6 +83,10 @@ function myPauseAll(){
    document.getElementById('myAudio2').pause()
 }">
 
+<input type=button value="stop" style="font-size:25px;" onclick="{
+   document.getElementById('myAudio2').pause()
+   document.getElementById('myAudio2').currentTime = 0;
+}">
 
 <br><br>
 
@@ -78,11 +96,11 @@ function myPauseAll(){
 
 
 
-//from any internet location or sdcard location
+Load from any internet location or sdcard location. Try different file formats to see what works on your phone<br>
 
 
-<input type=text value="http://142.33.222.23/ellis/test/test.mp3" id="myText1" style="font-size:25px;">
-<audio id="myAudio3" src="http://142.33.222.23/ellis/test/test.mp3"></audio>
+<input type=text value="http://yourwebsite/yourfolder/test.mp3" id="myText1" style="font-size:25px;">
+<audio id="myAudio3" src="http://yourwebsite/yourfolder/test.mp3"></audio>
 
 <input type=button value="load" style="font-size:25px;" onclick="{
    document.getElementById('myAudio3').src =    document.getElementById('myText1').value
@@ -98,6 +116,11 @@ function myPauseAll(){
 <input type=button value="pause" style="font-size:25px;" onclick="{
    document.getElementById('myAudio3').pause()
 }">
+
+<input type=button value="stop" style="font-size:25px;" onclick="{
+   document.getElementById('myAudio3').pause()
+   document.getElementById('myAudio3').currentTime = 0;
+}">
 <br><br>
 
 
@@ -111,13 +134,13 @@ function myPauseAll(){
 
 
 
-// from your phones sdcard
+ from your phones sdcard at the location /sdcard/myRecording.mp3. Note: a sound file must be at that location.<br>
 
 <audio id="myAudio4" src="/sdcard/myRecording.mp3"></audio>
 
 <input type=button value="load" style="font-size:25px;" onclick="{
-   document.getElementById('myAudio2').play()
-   document.getElementById('myAudio2').pause()
+   document.getElementById('myAudio4').play()
+   document.getElementById('myAudio4').pause()
 }">
 
 <input type=button value="play" style="font-size:25px;" onclick="{
@@ -129,13 +152,12 @@ function myPauseAll(){
    document.getElementById('myAudio4').pause()
 }">
 
+<input type=button value="stop" style="font-size:25px;" onclick="{
+   document.getElementById('myAudio4').pause()
+   document.getElementById('myAudio4').currentTime = 0;
+}">
 
 <br><br>
-
-
-
-
-
 
 
 
