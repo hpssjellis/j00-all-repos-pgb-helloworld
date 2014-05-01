@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.phonegap4.example3"
+        id          = "j00-all-repos-pgb-helloworld"
         versionCode = "10" 
         version     = "2.0.2" >
 
@@ -10,7 +10,7 @@
 
 
 
-<!--From j05-plugin-genenal-pgb-helloworld -->
+<!--From j05-plugin-genenal-pgb-helloworld and  j23-sound-pgb-helloworld -->
 
     <gap:plugin name="org.apache.cordova.core.media" /> 
     <gap:plugin name="org.apache.cordova.camera" />
@@ -44,7 +44,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />  
     <gap:plugin name="org.apache.cordova.media" />  
     <gap:plugin name="org.apache.cordova.geolocation" />  
-    <gap:plugin name="org.apache.cordova.file" />  -->   
+    <gap:plugin name="org.apache.cordova.file" />  
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.device-motion" />
 
