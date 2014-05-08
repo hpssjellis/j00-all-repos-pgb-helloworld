@@ -4,5 +4,9 @@ j00-all-repos-pgb-helloworld
 A combination of all my repositories for Phonegap Build demonstration Apps
 
 
-Just started this April 30 2014. Hopefully will be a set of example Hello World programs for Phonegap Build.
+May 7, 2014. This works great with phonegap serve on both the iPad and Android, but many of the files in sub folders do not seem to work on phonegap build. So I am in the process of taking the files out of the folders.
+
+
+
+Hopefully will be a set of example Hello World programs for Phonegap Build.
 
