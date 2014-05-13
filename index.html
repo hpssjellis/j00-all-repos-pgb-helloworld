@@ -1,3 +1,106 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+<script type="text/javascript">
+
+
+window.onload = function(){
+
+//Global Variables
+document.myStartDist = 0
+document.myScale = 1.1
+document.myOnlyZoomLarger = 'true'    // if true page only can zoom larger, false allows page to shrink 
+
+document.getElementById('myDiv1').style.WebkitTransformOrigin = '0px 0px';
+
+
+
+
+// basic touch events
+
+
+ myBodyId.ontouchstart = function(event){
+    myFinger0 = event.touches[0]
+    myFinger1 = event.touches[1]
+    document.myStartDist = parseInt(myFinger0.clientX)  - parseInt(myFinger1.clientX)    
+ }
+
+
+
+  myBodyId.ontouchmove = function(event){
+   
+   if (event.touches.length == 2){     // check if only two fingers on the device
+    
+    myFinger0 = event.touches[0]
+    myFinger1 = event.touches[1]
+    myNewWidth = parseInt(myFinger0.clientX) - parseInt(myFinger1.clientX)   
+    myChangeX =  myNewWidth / document.myStartDist  
+    document.myScale = myChangeX
+    
+    
+    
+    // the following is less confusing than normal javascript if statements
+    
+    if (document.myOnlyZoomLarger == 'false'){
+      if (document.myScale < 0.05){    // so web page does not fully disapear
+          document.myScale = 0.05
+      } 
+      document.getElementById('myDiv1').style.webkitTransform = 'scale('+document.myScale+')';
+    }  
+    
+    
+    if (document.myOnlyZoomLarger == 'true'){
+      if (document.myScale < 1){    //  resets webpage to original size
+          document.myScale = 1.0
+          document.getElementById('myDiv1').style.webkitTransform = 'scale(1.0)';
+      } else {
+        document.getElementById('myDiv1').style.webkitTransform = 'scale('+document.myScale+')';
+      }
+    }
+          
+        
+
+   } // end touches   
+    
+  }  // end ontouchmove
+
+
+
+
+
+
+
+
+
+}
+</script>
+
+</head>
+
+<body id="myBodyId" >
+<div id="myDiv1">
+
+
+<input type=button id="myZoomButton" value="Presently Zoom Larger Only" style="font-size:30px" onclick="{
+if (document.myOnlyZoomLarger == 'true'){
+   document.myOnlyZoomLarger = 'false'
+   document.all.myZoomButton.value = 'Presently Zoom and Shrink'
+   } else {
+      document.myOnlyZoomLarger = 'true'
+      document.all.myZoomButton.value = 'Presently Zoom Larger Only'   
+   }
+   
+   
+}"><br><br>
+
+
+
+
+<h1></h1>j00-all-repos-pgb-helloworld  </h1><br><br>
+
+
 
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 
@@ -19,7 +122,6 @@
 <li><input type=button style="font-size:15px" value="j23-sound-pgb-helloworld" onclick="{location='j23-sound-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j23-sound-pgb-helloworld'}"><br><br>
 <li><input type=button style="font-size:15px" value="j23-splashScreen-pgb-helloworld" onclick="{location='j23-splashScreen-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j23-splashScreen-pgb-helloworld'}"><br><br>
 <li><input type=button style="font-size:15px" value="j24-geolocation-pgb-helloworld" onclick="{location='j24-geolocation-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j24-geolocation-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:15px" value="j30-zoom-scale-pgb-helloworld" onclick="{location='j30-zoom-scale-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j30-zoom-scale-pgb-helloworld'}"><br><br>
 <li><input type=button style="font-size:15px" value="j31-inappbrowser-pgb-helloworld" onclick="{location='j31-inappbrowser-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j31-inappbrowser-pgb-helloworld'}"><br><br>
 <li><input type=button style="font-size:15px" value="j40-jsc3d-basic-pgb-helloworld" onclick="{location='j40-jsc3d-basic-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j40-jsc3d-basic-pgb-helloworld'}"><br><br>
 <li><input type=button style="font-size:15px" value="j41-jsc3d-advanced-pgb-helloworld" onclick="{location='j41-jsc3d-advanced-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j41-jsc3d-advanced-pgb-helloworld'}"><br><br>
@@ -35,3 +137,59 @@
   
   </td></tr>
 </table>
+
+
+</div>
+</body>    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
