@@ -10,3 +10,8 @@ May 7, 2014. This works great with phonegap serve on both the iPad and Android, 
 
 Hopefully will be a set of example Hello World programs for Phonegap Build.
 
+Try this link
+
+https://github.com/hpssjellis/j00-everything-but-the-kitchen-sink-pgb-helloworld/blob/master/index.html
+
+for the new file that should work with phonegap build.
