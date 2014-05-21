@@ -12,6 +12,6 @@ Hopefully will be a set of example Hello World programs for Phonegap Build.
 
 Try this link
 
-https://github.com/hpssjellis/j00-everything-but-the-kitchen-sink-pgb-helloworld/blob/master/index.html
+https://github.com/hpssjellis/j00-everything-but-the-kitchen-sink-pgb-helloworld
 
 for the new file that should work with phonegap build.
